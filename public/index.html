@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archery AI Hub</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #071526;
+      color: white;
+    }
+
+    header {
+      background: #102d49;
+      padding: 25px 15px;
+      text-align: center;
+      border-bottom: 3px solid #00c8a0;
+    }
+
+    header h1 {
+      color: #00d5ad;
+      margin: 0;
+      font-size: 27px;
+    }
+
+    header p {
+      color: #c8d8e8;
+    }
+
+    main {
+      max-width: 450px;
+      margin: 35px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: #102d49;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px #0005;
+    }
+
+    h2 {
+      text-align: center;
+      color: #00d5ad;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      margin: 9px 0;
+      border: 1px solid #45627c;
+      border-radius: 7px;
+      background: #071526;
+      color: white;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 12px;
+      border: 0;
+      border-radius: 7px;
+      background: #00c8a0;
+      color: #071526;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .secondary {
+      background: #234563;
+      color: white;
+    }
+
+    #message {
+      text-align: center;
+      color: #ffd166;
+      margin-top: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #a9bfd2;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ARCHERY AI HUB</h1>
+  <p>Welcome to your digital platform</p>
+</header>
+
+<main>
+  <div class="card">
+    <h2>Member Login</h2>
+
+    <input id="loginPhone" type="tel"
+      placeholder="Enter phone number">
+
+    <input id="loginPassword" type="password"
+      placeholder="Enter secret password">
+
+    <button onclick="login()">Login</button>
+
+    <button class="secondary"
+      onclick="showRegister()">Create Account</button>
+
+    <div id="registerArea" hidden>
+      <h2>Member Registration</h2>
+
+      <input id="fullName" type="text"
+        placeholder="Full name">
+
+      <input id="registerPhone" type="tel"
+        placeholder="Phone number">
+
+      <input id="registerPassword" type="password"
+        placeholder="Create secret password">
+
+      <button onclick="register()">Register</button>
+    </div>
+
+    <p id="message"></p>
+  </div>
+</main>
+
+<footer>
+  © 2026 Archery AI Hub
+</footer>
+
+<script>
+  function showRegister() {
+    document.getElementById("registerArea").hidden = false;
+  }
+
+  async function register() {
+    document.getElementById("message").textContent =
+      "Registration service is being prepared.";
+  }
+
+  async function login() {
+    document.getElementById("message").textContent =
+      "Login service is being prepared.";
+  }
+</script>
+
+</body>
+</html>
